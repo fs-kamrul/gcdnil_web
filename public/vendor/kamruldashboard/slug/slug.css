@@ -1,0 +1,102 @@
+.modal-title {
+    color: white;
+}
+.modal-header .close {
+    color: white;
+}
+.dz-image img {
+    width: 100%;
+    height: 100%;
+}
+.dropzone.dz-started .dz-message {
+    display: block !important;
+}
+.dropzone {
+    border: 2px dashed #028AF4 !important;;
+}
+.dropzone .dz-preview.dz-complete .dz-success-mark {
+    opacity: 1;
+}
+.dropzone .dz-preview.dz-error .dz-success-mark {
+    opacity: 0;
+}
+.dropzone .dz-preview .dz-error-message{
+    top: 144px;
+}
+#container {
+    width: 100%;
+    margin: 20px auto;
+}
+.ck-editor__editable[role="textbox"] {
+    /* editing area */
+    min-height: 200px;
+}
+.ck-content .image {
+    /* block images */
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+#edit-slug-box {
+    line-height: 24px;
+    min-height: 25px;
+    margin-top: 5px;
+}
+
+#change_slug, #btn-ok, .btn-preview {
+    height: 24px;
+    line-height: 22px !important;
+    padding: 0 8px 1px !important;
+    font-size: 11px !important;
+    vertical-align: top;
+    margin: 0;
+}
+
+#change_slug, #btn-ok {
+    color: #555555 !important;
+    border-color: #cccccc;
+    background: #f7f7f7;
+}
+
+.btn-preview {
+    margin-left: 10px;
+    color: #fff !important;
+}
+
+.permalink {
+    text-decoration: underline;
+}
+
+#editable-post-name {
+    font-weight: 700;
+}
+
+#editable-post-name input {
+    font-size: 13px;
+    font-weight: 400;
+    height: 22px;
+    margin: 0;
+    width: 16em;
+    display: inline-block;
+}
+
+#edit-slug-box .cancel {
+    padding: 0;
+    font-size: 11px;
+    text-decoration: underline;
+    color: #0073aa;
+    margin: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: 0 0;
+    outline: 0;
+    cursor: pointer;
+    display: none;
+}
+
+#btn-ok {
+    display: none;
+}

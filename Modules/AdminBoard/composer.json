@@ -1,0 +1,23 @@
+{
+    "name": "kamrul/adminboard",
+    "description": "",
+    "authors": [
+        {
+            "name": "Kamrul Islam",
+            "email": "anik825@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+                "AdminBoardHelper": "Modules\\AdminBoard\\Packages\\Packages\\Facades\\AdminBoardFacade"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\AdminBoard\\": ""
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<?php
+
+Route::group(['middleware' => ['web', 'setData', 'AdminSidebarMenu']], function () {
+    Route::prefix('__ShortLocationName__')->group(function() {
+        Route::get('/install', 'InstallController@index');
+        Route::get('/install/update', 'InstallController@update');
+        Route::get('/install/uninstall', 'InstallController@uninstall');
+        Route::get('/import', '__LocationName__Controller@import')->name('__ShortLocationName__.import');
+        Route::post('/store_import', '__LocationName__Controller@store_import')->name('__ShortLocationName__.store_import');
+        Route::get('/pdf_show/{__SingularLocationName__}', '__LocationName__Controller@pdf')->name('__ShortLocationName__.pdf_show');
+    });
+    Route::get('api/__ShortLocationName__','__LocationName__Controller@data');
+    Route::resource('__ShortLocationName__', '__LocationName__Controller');
+});

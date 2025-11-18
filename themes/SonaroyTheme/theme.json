@@ -1,0 +1,15 @@
+{
+    "name": "SonaroyTheme",
+    "alias": "sonaroytheme",
+    "author": "Kamrul Islam",
+    "namespace": "Theme\\SonaroyTheme\\",
+    "description": "SonaroyTheme theme",
+    "version": "1.0.0",
+    "keywords": [],
+    "priority": 0,
+    "providers": [],
+    "aliases": {},
+    "files": [],
+    "required_plugins": [],
+    "requires": []
+}

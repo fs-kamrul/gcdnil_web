@@ -1,0 +1,1 @@
+(()=>{"use strict";$(document).ready((function(){$(document).on("click",".add-curriculum-schema-items",(function(c){c.preventDefault(),$(".curriculum-schema-items").toggleClass("hidden")}))}))})();

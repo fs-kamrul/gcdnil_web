@@ -1,0 +1,30 @@
+<?php
+
+namespace Modules\__PlaginName__\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Factory;
+use Modules\__PlaginName__\Http\Models\__PlaginName__;
+use Modules\__PlaginName__\Repositories\Cache\__PlaginName__CacheDecorator;
+use Modules\__PlaginName__\Repositories\Eloquent\__PlaginName__Repository;
+use Modules\__PlaginName__\Repositories\Interfaces\__PlaginName__Interface;
+//add_new_line_Interface_and_Repository_call
+
+class HookServiceProvider extends ServiceProvider
+{
+
+    /**
+     * Boot the application events.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->app->bind(__PlaginName__Interface::class, function () {
+            return new __PlaginName__CacheDecorator(
+                new __PlaginName__Repository(new __PlaginName__)
+            );
+        });
+//add_new_line_Interface_and_Repository_to_hook
+    }
+}

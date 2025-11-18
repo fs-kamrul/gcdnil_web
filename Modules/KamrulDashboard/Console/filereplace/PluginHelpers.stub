@@ -1,0 +1,5 @@
+<?php
+if (! defined('__AllPlaginName___MODULE_SCREEN_NAME')) {
+    define('__AllPlaginName___MODULE_SCREEN_NAME', '__ShortPlaginName__');
+}
+//add_next_line

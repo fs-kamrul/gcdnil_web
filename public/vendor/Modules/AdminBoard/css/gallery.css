@@ -1,0 +1,112 @@
+#gallery .gallery_img {
+    height: 350px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+#gallery .gallery_img img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mfp-bg {
+    z-index: 99999;
+}
+
+.mfp-wrap {
+    z-index: 99999;
+}
+
+#gallery .gallery_img .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 228px;
+    background: transparent linear-gradient(0deg, #022048 0%, #00060e00 100%) 0% 0% no-repeat padding-box;
+    transition: all linear 0.1s;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#gallery .gallery_img .overlay p {
+    color: #fff;
+}
+
+#gallery .gallery_img:hover .overlay {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.gallery_folder {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+#gallery_main_page img {
+    display: block;
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#gallery_main_page .gallery_folder .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 228px;
+    background: transparent linear-gradient(0deg, #022048 0%, #00060e00 100%) 0% 0% no-repeat padding-box;
+    transition: all linear 0.1s;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#gallery_main_page .gallery_folder .overlay:before {
+    background: none;
+}
+
+#gallery_main_page .gallery_folder .overlay p {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+#gallery_main_page .gallery_folder span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all linear .2s;
+}
+
+#gallery_main_page .gallery_folder span a {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 30px;
+    background-color: #022048;
+    color: #fff;
+    transition: all linear .3s;
+}
+
+#gallery_main_page .gallery_folder span a:hover{
+    color: #52ac47;
+}
+
+#gallery_main_page .gallery_folder:hover .overlay {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#gallery_main_page .gallery_folder:hover span {
+    opacity: 1;
+}

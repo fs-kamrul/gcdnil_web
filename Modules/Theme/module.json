@@ -1,0 +1,24 @@
+{
+    "name": "Theme",
+    "alias": "theme",
+    "description": "Theme Core Module",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Theme\\Providers\\ThemeServiceProvider"
+    ],
+    "aliases": {
+        "Youtube": "Modules\\Theme\\Packages\\Facades\\YoutubeFacade",
+        "ThemeOption": "Modules\\Theme\\Packages\\Facades\\ThemeOptionFacade",
+        "Vimeo": "Modules\\Theme\\Packages\\Facades\\VimeoFacade",
+        "AdminBar": "Modules\\Theme\\Packages\\Facades\\AdminBarFacade",
+        "Theme": "Modules\\Theme\\Packages\\Facades\\ThemeFacade",
+        "SiteMapManager": "Modules\\Theme\\Packages\\Facades\\SiteMapManagerFacade",
+        "ThemeManager": "Modules\\Theme\\Packages\\Facades\\ManagerFacade"
+    },
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

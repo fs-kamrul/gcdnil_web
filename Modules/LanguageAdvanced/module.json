@@ -1,0 +1,17 @@
+{
+    "name": "LanguageAdvanced",
+    "alias": "languageadvanced",
+    "description": "languageadvanced Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\LanguageAdvanced\\Providers\\LanguageAdvancedServiceProvider",
+        "Modules\\LanguageAdvanced\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

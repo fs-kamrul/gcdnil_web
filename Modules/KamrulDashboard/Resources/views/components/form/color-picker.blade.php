@@ -1,0 +1,1 @@
+<x-kamruldashboard::form.text-input {{ $attributes->merge(['data-bb-color-picker' => '']) }}  />

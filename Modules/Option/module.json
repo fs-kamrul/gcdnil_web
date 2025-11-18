@@ -1,0 +1,17 @@
+{
+    "name": "Option",
+    "alias": "option",
+    "description": "option Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Option\\Providers\\OptionServiceProvider",
+        "Modules\\Option\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

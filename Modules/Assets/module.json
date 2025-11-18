@@ -1,0 +1,14 @@
+{
+    "name": "Assets",
+    "alias": "assets",
+    "description": "assets Plugin",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Assets\\Providers\\AssetsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

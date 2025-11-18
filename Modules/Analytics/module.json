@@ -1,0 +1,19 @@
+{
+    "name": "Analytics",
+    "alias": "analytics",
+    "description": "analytics Plugin",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Analytics\\Providers\\AnalyticsServiceProvider",
+        "Modules\\Analytics\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {
+        "Analytics": "Modules\\Analytics\\Packages\\Facades\\AnalyticsFacade"
+    },
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

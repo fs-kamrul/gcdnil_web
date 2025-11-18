@@ -1,0 +1,14 @@
+<?php
+
+namespace Modules\__PlaginName__\Repositories\Interfaces;
+
+use Modules\KamrulDashboard\Repositories\Interfaces\RepositoryInterface;
+
+interface __PlaginName__Interface extends RepositoryInterface
+{
+    /**
+     * @param string $name
+     * @return mixed
+     */
+    public function createSlug($name);
+}

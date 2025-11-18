@@ -1,0 +1,18 @@
+<?php
+
+namespace Modules\__PlaginName__\Repositories\Cache;
+
+use Modules\__PlaginName__\Repositories\Interfaces\__PlaginName__Interface;
+use Modules\KamrulDashboard\Repositories\Caches\CacheAbstractDecorator;
+
+class __PlaginName__CacheDecorator extends CacheAbstractDecorator implements __PlaginName__Interface
+{
+
+    /**
+     * {@inheritDoc}
+     */
+    public function createSlug($name)
+    {
+        return $this->flushCacheAndUpdateData(__FUNCTION__, func_get_args());
+    }
+}

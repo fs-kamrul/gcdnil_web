@@ -1,0 +1,17 @@
+{
+    "name": "AwesomeIcon",
+    "alias": "awesomeicon",
+    "description": "awesomeicon Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AwesomeIcon\\Providers\\AwesomeIconServiceProvider",
+        "Modules\\AwesomeIcon\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

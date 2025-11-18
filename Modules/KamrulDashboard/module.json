@@ -1,0 +1,30 @@
+{
+    "name": "KamrulDashboard",
+    "alias": "kamruldashboard",
+    "description": "Plugin Create System",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\KamrulDashboard\\Providers\\KamrulDashboardServiceProvider",
+        "Modules\\KamrulDashboard\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {
+        "Fpdf": "Modules\\KamrulDashboard\\Packages\\Facades\\FpdfFacade",
+        "Dboard": "Modules\\KamrulDashboard\\Packages\\Facades\\DboardFacade",
+        "Savefunction": "Modules\\KamrulDashboard\\Packages\\Facades\\SavefunctionFacade",
+        "SettingDataF": "Modules\\KamrulDashboard\\Packages\\Facades\\SettingFacade",
+        "DboardHelper": "Modules\\KamrulDashboard\\Packages\\Facades\\DboardHelperFacade",
+        "SlugHelper": "Modules\\KamrulDashboard\\Packages\\Facades\\SlugHelperFacade",
+        "MacroableModels": "Modules\\KamrulDashboard\\Packages\\Facades\\MacroableModelsFacade",
+        "MetaBox": "Modules\\KamrulDashboard\\Packages\\Facades\\MetaBoxFacade",
+        "Assets": "Modules\\KamrulDashboard\\Packages\\Facades\\AssetsFacade",
+        "PageTitle": "Modules\\KamrulDashboard\\Packages\\Facades\\PageTitleFacade",
+        "EmailHandler": "Modules\\KamrulDashboard\\Packages\\Facades\\EmailHandlerFacade"
+    },
+    "files": [
+        "Http/helpers/helpers.php",
+        "Http/helpers/action_filter.php"
+    ],
+    "requires": []
+}

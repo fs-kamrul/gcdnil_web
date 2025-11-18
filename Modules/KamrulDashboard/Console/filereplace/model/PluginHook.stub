@@ -1,0 +1,5 @@
+        $this->app->bind(__PlaginName__Interface::class, function () {
+            return new __PlaginName__CacheDecorator(
+                new __PlaginName__Repository(new __PlaginName__)
+            );
+        });

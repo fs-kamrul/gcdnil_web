@@ -1,0 +1,56 @@
+<?php
+
+namespace Modules\KamrulDashboard\Packages\Supports;
+
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
+
+class SlugCompiler
+{
+    /**
+     * @return array
+     */
+    protected $variables = [];
+
+    public function __construct()
+    {
+        $now = Carbon::now();
+
+        $this->variables = [
+            '%%year%%' => [
+                'label' => __('Current year'),
+                'value' => $now->year,
+            ],
+            '%%month%%' => [
+                'label' => __('Current month'),
+                'value' => $now->month,
+            ],
+            '%%day%%' => [
+                'label' => __('Current day'),
+                'value' => $now->month,
+            ],
+        ];
+    }
+
+    public function getVariables(): array
+    {
+        return apply_filters(SLUG_VARIABLES, $this->variables);
+    }
+
+    /**
+     * @param string $model
+     * @return mixed
+     */
+    public function compile(?string $prefix, $model = null): string
+    {
+        if (! $prefix) {
+            return '';
+        }
+
+        foreach ($this->getVariables() as $key => $value) {
+            $prefix = str_replace($key, $value['value'], $prefix);
+        }
+
+        return apply_filters('cms_slug_prefix', $prefix, $model);
+    }
+}

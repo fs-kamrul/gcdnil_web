@@ -1,0 +1,16 @@
+{
+    "name": "Post",
+    "alias": "post",
+    "description": "",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Post\\Providers\\PostServiceProvider",
+        "Modules\\Post\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+    ],
+    "requires": []
+}

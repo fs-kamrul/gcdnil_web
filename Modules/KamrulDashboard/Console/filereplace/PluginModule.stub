@@ -1,0 +1,17 @@
+{
+    "name": "__PlaginName__",
+    "alias": "__ShortPlaginName__",
+    "description": "__ShortPlaginName__ Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\__PlaginName__\\Providers\\__PlaginName__ServiceProvider",
+        "Modules\\__PlaginName__\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

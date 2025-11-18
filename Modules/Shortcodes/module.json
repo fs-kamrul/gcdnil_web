@@ -1,0 +1,16 @@
+{
+    "name": "Shortcodes",
+    "alias": "shortcodes",
+    "description": "Shortcodes System Module",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Shortcodes\\Providers\\ShortcodesServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

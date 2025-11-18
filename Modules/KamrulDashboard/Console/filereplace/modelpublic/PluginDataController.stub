@@ -1,0 +1,6 @@
+                if(auth()->user()->can('__ShortPlaginName___access')) {
+                    $menu->url(
+                        action('\Modules\__LocationName__\Http\Controllers\__PlaginName__Controller@index'),
+                        __('__ShortLocationName__::lang.__ShortPlaginName__'),
+                        ['icon' => 'icon-file-signature']
+                    )->order(20); }

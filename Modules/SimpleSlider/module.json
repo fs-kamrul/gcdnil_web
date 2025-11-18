@@ -1,0 +1,15 @@
+{
+    "name": "SimpleSlider",
+    "alias": "simpleslider",
+    "description": "simpleslider Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SimpleSlider\\Providers\\SimpleSliderServiceProvider",
+        "Modules\\SimpleSlider\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

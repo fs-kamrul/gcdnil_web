@@ -1,0 +1,14 @@
+{
+    "name": "Sitemap",
+    "alias": "sitemap",
+    "description": "sitemap Plugin",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Sitemap\\Providers\\SitemapServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

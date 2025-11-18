@@ -1,0 +1,17 @@
+{
+    "name": "VenueFacility",
+    "alias": "venuefacility",
+    "description": "venuefacility Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\VenueFacility\\Providers\\VenueFacilityServiceProvider",
+        "Modules\\VenueFacility\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Admission",
+    "alias": "admission",
+    "description": "admission Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Admission\\Providers\\AdmissionServiceProvider",
+        "Modules\\Admission\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

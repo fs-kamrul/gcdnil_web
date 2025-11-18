@@ -1,0 +1,17 @@
+{
+    "name": "Language",
+    "alias": "language",
+    "description": "Language Plugin",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Language\\Providers\\LanguageServiceProvider",
+        "Modules\\Language\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {
+    },
+    "files": [
+    ],
+    "requires": []
+}

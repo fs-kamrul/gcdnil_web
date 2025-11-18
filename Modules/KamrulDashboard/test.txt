@@ -1,0 +1,12 @@
+    "require": {
+        "kamrul/kamruldashboard": "@dev",
+    }
+    "repositories": {
+        "KamrulDashboard": {
+            "type": "path",
+            "url": "Modules/KamrulDashboard",
+            "options": {
+                "symlink": true
+            }
+        }
+    },

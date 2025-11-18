@@ -1,0 +1,118 @@
+<?php
+return [
+    'option' => 'Option',
+    'option_add' => 'Option add',
+    'option_create' => 'Option create',
+    'option_edit' => 'Option edit',
+    'option_show' => 'Option show',
+    'name' => 'Name',
+    'photo' => 'Photo',
+    'status' => 'Status',
+    'description' => 'Description',
+    'save' => 'Save',
+    'order' => 'Order',
+    'update' => 'Update',
+    'pdf' => 'Pdf',
+    'edit' => 'Edit',
+    'group' => 'Group',
+    'subject' => 'Subject',
+    'delete' => 'Delete',
+    'record_update_successfully' => 'Record update successfully',
+    'record_save_successfully' => 'Record save successfully',
+    'something_error_please_try_again_later' => 'Something error! please try again later',
+    'record_deleted_successfully' => 'Record deleted successfully',
+    'this_record_is_in_use_in_other_modules' => 'This record is in use in other modules',
+    'option_import' => 'Option Import',
+    'import' => 'Import',
+    'view' => 'View',
+    'select_all' => 'Select All',
+    'id' => 'Id',
+    'action' => 'Action',
+    'create_by' => 'Create By',
+    'publish' => 'Publish',
+    'code' => 'Code',
+    'total_mark' => 'Total Mark',
+    'datatables' =>[
+        'copy' => 'Copy',
+        'csv' => 'Csv',
+        'excel' => 'Excel',
+        'pdf' => 'Pdf',
+        'print' => 'Print',
+        'colvis' => 'Column',
+        'select_all' => 'Select all',
+        'deselect_all' => 'Deselect all',
+    ],
+    'selected_subjects' => 'Selected Subjects',
+    'optionbloodgroup' => 'Blood Group',
+    'optionbloodgroup_add' => 'Blood Group add',
+    'optionbloodgroup_create' => 'Blood Group create',
+    'optionbloodgroup_edit' => 'Blood Group edit',
+    'optionbloodgroup_show' => 'Blood Group show',
+    'optionbloodgroup_import' => 'Blood Group Import',
+
+    'optionset' => 'Admission Set',
+    'optionset_add' => 'Set add',
+    'optionset_create' => 'Set create',
+    'optionset_edit' => 'Set edit',
+    'optionset_show' => 'Set show',
+    'optionset_import' => 'Set Import',
+
+    'optionsubject' => 'Subject',
+    'optionsubject_add' => 'Subject add',
+    'optionsubject_create' => 'Subject create',
+    'optionsubject_edit' => 'Subject edit',
+    'optionsubject_show' => 'Subject show',
+    'optionsubject_import' => 'Subject Import',
+
+    'optiongender' => 'Gender',
+    'optiongender_add' => 'Gender add',
+    'optiongender_create' => 'Gender create',
+    'optiongender_edit' => 'Gender edit',
+    'optiongender_show' => 'Gender show',
+    'optiongender_import' => 'Gender Import',
+
+    'optionreligion' => 'Religion',
+    'optionreligion_add' => 'Religion add',
+    'optionreligion_create' => 'Religion create',
+    'optionreligion_edit' => 'Religion edit',
+    'optionreligion_show' => 'Religion show',
+    'optionreligion_import' => 'Religion Import',
+
+    'optionsection' => 'Section',
+    'optionsection_add' => 'Section add',
+    'optionsection_create' => 'Section create',
+    'optionsection_edit' => 'Section edit',
+    'optionsection_show' => 'Section show',
+    'optionsection_import' => 'Section Import',
+
+    'optiongroup' => 'Group',
+    'optiongroup_add' => 'Group add',
+    'optiongroup_create' => 'Group create',
+    'optiongroup_edit' => 'Group edit',
+    'optiongroup_show' => 'Group show',
+    'optiongroup_import' => 'Group Import',
+
+    'optionyear' => 'Year',
+    'optionyear_add' => 'Year add',
+    'optionyear_create' => 'Year create',
+    'optionyear_edit' => 'Year edit',
+    'optionyear_show' => 'Year show',
+    'optionyear_import' => 'Year Import',
+
+    'optionclass' => 'Class',
+    'optionclass_add' => 'Class add',
+    'optionclass_create' => 'Class create',
+    'optionclass_edit' => 'Class edit',
+    'optionclass_show' => 'Class show',
+    'optionclass_import' => 'Class Import',
+
+];
+
+
+
+
+
+
+
+
+

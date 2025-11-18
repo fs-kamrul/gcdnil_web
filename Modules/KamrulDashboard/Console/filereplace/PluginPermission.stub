@@ -1,0 +1,31 @@
+<?php
+
+namespace Modules\__PlaginName__\Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Modules\KamrulDashboard\Http\Models\Permission;
+
+class __PlaginName__PermissionSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $data = [
+            [ 'name'         => "__ShortPlaginName___access" ],
+            [ 'name'         => "__ShortPlaginName___list_own" ],
+            [ 'name'         => "__ShortPlaginName___list_all" ],
+            [ 'name'         => "__ShortPlaginName___create" ],
+            [ 'name'         => "__ShortPlaginName___edit" ],
+            [ 'name'         => "__ShortPlaginName___pdf" ],
+            [ 'name'         => "__ShortPlaginName___show" ],
+            [ 'name'         => "__ShortPlaginName___destroy" ],
+            [ 'name'         => "__ShortPlaginName___import" ]
+        ];
+
+        Permission::upsert($data, ['name']);
+    }
+}

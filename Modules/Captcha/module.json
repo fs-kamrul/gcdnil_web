@@ -1,0 +1,15 @@
+{
+    "name": "Captcha",
+    "alias": "captcha",
+    "description": "captcha Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Captcha\\Providers\\CaptchaServiceProvider",
+        "Modules\\Captcha\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

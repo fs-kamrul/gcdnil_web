@@ -1,0 +1,55 @@
+<?php
+
+namespace Modules\Location\Console;
+
+use Illuminate\Console\Command;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Location;
+use Symfony\Component\Console\Attribute\AsCommand;
+use Symfony\Component\Console\Input\InputOption;
+
+#[AsCommand('kamrul:location:migrate', 'Migrate location columns to table')]
+class MigrateLocationCommand extends Command
+{
+    public function handle(): int
+    {
+        $className = str_replace('/', '\\', $this->option('class'));
+        $error = true;
+
+        if (! $className) {
+            dd(Location::supportedModels());
+            foreach (Location::supportedModels() as $className) {
+                $this->runSchema($className);
+                $error = false;
+            }
+        } elseif (Location::isSupported($className)) {
+            $this->runSchema($className);
+            $error = false;
+        }
+
+        if ($error) {
+            $this->error('Not supported model');
+        } else {
+            $this->info('Migrate location successfully!');
+        }
+
+        return self::SUCCESS;
+    }
+
+    public function runSchema(string $className): void
+    {
+        $model = new $className();
+        Schema::connection($model->getConnectionName())->table(
+            $model->getTable(),
+            function (Blueprint $table) use ($className) {
+                $table->location($className);
+            }
+        );
+    }
+
+    protected function configure(): void
+    {
+        $this->addOption('class', null, InputOption::VALUE_REQUIRED, 'The model class name');
+    }
+}

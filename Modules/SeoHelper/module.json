@@ -1,0 +1,19 @@
+{
+    "name": "SeoHelper",
+    "alias": "seohelper",
+    "description": "seohelper Plugin",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SeoHelper\\Providers\\SeoHelperServiceProvider",
+        "Modules\\SeoHelper\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {
+        "SeoHelper": "Modules\\SeoHelper\\Packages\\Facades\\SeoHelperFacade"
+    },
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

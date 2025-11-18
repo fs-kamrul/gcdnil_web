@@ -1,0 +1,16 @@
+<?php
+
+namespace Modules\__LocationName__\Repositories\Interfaces;
+
+use Modules\KamrulDashboard\Repositories\Interfaces\RepositoryInterface;
+
+interface __PlaginName__Interface extends RepositoryInterface
+{
+    public function get__PlaginName__(array $filters = [], array $params = []);
+    public function getRelated__PlaginName__(int $adminId, int $limit = 4, array $with = []);
+    /**
+     * @param string $name
+     * @return mixed
+     */
+    public function createSlug($name);
+}

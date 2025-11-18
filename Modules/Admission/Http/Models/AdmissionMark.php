@@ -1,0 +1,49 @@
+<?php
+
+namespace Modules\Admission\Http\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Modules\KamrulDashboard\Http\Models\User;
+
+class AdmissionMark extends Model
+{
+    use HasFactory;
+    protected $guarded = [];
+
+    /**
+     * The date fields for the model.clear
+     *
+     * @var array
+     */
+    protected $dates = [
+        'created_at',
+        'updated_at',
+    ];
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'admission_subjects_id',
+        'admissions_id',
+        'name',
+        'mark',
+        'user_id',
+    ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function admission()
+    {
+        return $this->belongsTo(Admission::class, 'admissions_id');
+    }
+
+    public function subject()
+    {
+        return $this->belongsTo(AdmissionSubject::class, 'admission_subjects_id');
+    }
+}

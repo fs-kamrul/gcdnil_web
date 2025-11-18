@@ -1,0 +1,15 @@
+{
+    "name": "Location",
+    "alias": "location",
+    "description": "location Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Location\\Providers\\LocationServiceProvider",
+        "Modules\\Location\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

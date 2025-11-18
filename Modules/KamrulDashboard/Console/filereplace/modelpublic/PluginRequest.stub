@@ -1,0 +1,28 @@
+<?php
+
+namespace Modules\__LocationName__\Http\Requests;
+
+use Illuminate\Validation\Rule;
+use Modules\__LocationName__\Enums\__PlaginName__StatusEnum;
+use Modules\KamrulDashboard\Http\Requests\Request;
+
+class __PlaginName__Request extends Request
+{
+    public function rules(): array
+    {
+        return [
+            'name' => 'required|string|max:120',
+            'short_description' => 'required|string|max:160',
+            'description' => 'nullable|string|max:400',
+            'status' => Rule::in(__PlaginName__StatusEnum::values()),
+        ];
+    }
+
+    public function attributes(): array
+    {
+        return [
+            'custom_fields.*.name' => trans('__ShortPlaginName__::custom-fields.name'),
+            'custom_fields.*.value' => trans('__ShortPlaginName__::custom-fields.name'),
+        ];
+    }
+}

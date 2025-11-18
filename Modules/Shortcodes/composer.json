@@ -1,0 +1,26 @@
+{
+    "name": "kamrul/shortcodes",
+    "description": "",
+    "authors": [
+        {
+            "name": "Kamrul Islam",
+            "email": "anik825@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Shortcodes\\": ""
+        },
+        "files": [
+            "Http/helpers/helpers.php"
+        ]
+    }
+}

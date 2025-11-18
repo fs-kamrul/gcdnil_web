@@ -1,0 +1,23 @@
+{
+    "name": "kamrul/languageadvanced",
+    "description": "",
+    "authors": [
+        {
+            "name": "Kamrul Islam",
+            "email": "anik825@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\LanguageAdvanced\\": ""
+        }
+    }
+}

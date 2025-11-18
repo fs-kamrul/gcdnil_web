@@ -1,0 +1,30 @@
+<?php
+
+namespace Modules\Location\Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+
+class LocationDatabaseSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Model::unguard();
+
+        $this->call(
+            [
+                CityPermissionSeeder::class,
+                StatePermissionSeeder::class,
+                CountryPermissionSeeder::class,
+                CountrySeeder::class,
+                StateSeeder::class,
+                CitySeeder::class,
+            ]
+        );
+    }
+}

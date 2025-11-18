@@ -1,0 +1,18 @@
+{
+    "name": "Menus",
+    "alias": "menus",
+    "description": "",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Menus\\Providers\\MenusServiceProvider"
+    ],
+    "aliases": {
+        "Menus": "Modules\\Menus\\Packages\\Facades\\MenusFacade"
+    },
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Newsletter",
+    "alias": "newsletter",
+    "description": "newsletter Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Newsletter\\Providers\\NewsletterServiceProvider",
+        "Modules\\Newsletter\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+    ],
+    "requires": []
+}

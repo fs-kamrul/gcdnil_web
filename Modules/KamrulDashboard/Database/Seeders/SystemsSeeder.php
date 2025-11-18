@@ -1,0 +1,18 @@
+<?php
+
+namespace Modules\KamrulDashboard\Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class SystemsSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        //
+    }
+}

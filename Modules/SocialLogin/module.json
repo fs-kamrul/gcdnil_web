@@ -1,0 +1,15 @@
+{
+    "name": "SocialLogin",
+    "alias": "sociallogin",
+    "description": "sociallogin Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SocialLogin\\Providers\\SocialLoginServiceProvider",
+        "Modules\\SocialLogin\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

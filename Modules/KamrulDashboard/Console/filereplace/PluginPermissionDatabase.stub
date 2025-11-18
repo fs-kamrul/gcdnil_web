@@ -1,0 +1,25 @@
+<?php
+
+namespace Modules\__PlaginName__\Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+
+class __PlaginName__DatabaseSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Model::unguard();
+
+        $this->call(
+            [
+                __PlaginName__PermissionSeeder::class,
+            ]
+        );
+    }
+}

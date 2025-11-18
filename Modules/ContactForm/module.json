@@ -1,0 +1,15 @@
+{
+    "name": "ContactForm",
+    "alias": "contactform",
+    "description": "Contact Form",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ContactForm\\Providers\\ContactFormServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+    ],
+    "requires": []
+}

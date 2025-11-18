@@ -1,0 +1,14 @@
+{
+    "name": "ThemeIcon",
+    "alias": "themeicon",
+    "description": "Theme Module",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ThemeIcon\\Providers\\ThemeIconServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

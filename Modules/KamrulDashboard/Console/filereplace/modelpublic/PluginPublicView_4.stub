@@ -1,0 +1,10 @@
+@php
+    $wow = 0;
+    $increment = 0.2;
+@endphp
+@foreach($__PluralPluginName__ as $key=>$__SingularPlaginName__)
+    @php
+        $wow = ($key == 6) ? 0 : $wow+$increment;
+    @endphp
+    {!! Theme::partial('__pascalLocationName__.__PluralPluginName__.item', ['__SingularPlaginName__' => $__SingularPlaginName__, 'img_slider' => true, 'wow' => $wow]) !!}
+@endforeach

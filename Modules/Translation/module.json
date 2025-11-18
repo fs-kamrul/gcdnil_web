@@ -1,0 +1,15 @@
+{
+    "name": "Translation",
+    "alias": "translation",
+    "description": "translation Plugin",
+    "is_delete": 0,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Translation\\Providers\\TranslationServiceProvider",
+        "Modules\\Translation\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

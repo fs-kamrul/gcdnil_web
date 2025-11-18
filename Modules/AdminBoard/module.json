@@ -1,0 +1,19 @@
+{
+    "name": "AdminBoard",
+    "alias": "adminboard",
+    "description": "adminboard Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AdminBoard\\Providers\\AdminBoardServiceProvider",
+        "Modules\\AdminBoard\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {
+        "AdminBoardHelper": "Modules\\AdminBoard\\Packages\\Packages\\Facades\\AdminBoardFacade"
+    },
+    "files": [
+        "Http/helpers/helpers.php"
+    ],
+    "requires": []
+}

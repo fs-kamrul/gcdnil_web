@@ -1,0 +1,11 @@
+<?php
+Route::group(['middleware' => ['auth', '\Modules\KamrulDashboard\Http\Middleware\IsInstalled', '\Modules\KamrulDashboard\Http\Middleware\AdminSidebarMenu']], function () {
+    Route::group(['prefix' => DboardHelper::getAdminPrefix()], function () {
+        Route::resource('__ShortPlaginName__', '__PlaginName__Controller');
+        Route::delete('__ShortPlaginName__/items/destroy', [
+            'as'         => '__ShortPlaginName__.deletes',
+            'uses'       => '__PlaginName__Controller@deletes',
+        ]);
+    });
+});
+?>

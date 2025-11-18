@@ -1,0 +1,15 @@
+{
+    "name": "Faq",
+    "alias": "faq",
+    "description": "faq Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Faq\\Providers\\FaqServiceProvider",
+        "Modules\\Faq\\Providers\\HookServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

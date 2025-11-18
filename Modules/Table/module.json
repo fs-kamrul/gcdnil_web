@@ -1,0 +1,14 @@
+{
+    "name": "Table",
+    "alias": "table",
+    "description": "table Plugin",
+    "is_delete": 1,
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Table\\Providers\\TableServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
