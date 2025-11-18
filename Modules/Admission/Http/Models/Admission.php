@@ -6,10 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Modules\KamrulDashboard\Http\Models\User;
+use Modules\Location\Http\Models\City;
 use Modules\Location\Http\Models\Country;
+use Modules\Location\Http\Models\State;
 use Modules\Option\Http\Models\OptionBloodGroup;
 use Modules\Option\Http\Models\OptionClass;
+use Modules\Option\Http\Models\OptionGender;
 use Modules\Option\Http\Models\OptionGroup;
+use Modules\Option\Http\Models\OptionReligion;
 use Modules\Option\Http\Models\OptionSet;
 use Modules\Option\Http\Models\OptionSubject;
 use Modules\Option\Http\Models\OptionYear;
@@ -143,13 +147,57 @@ class Admission extends Model
     {
         return $this->belongsTo(OptionClass::class, 'class');
     }
+    public function pre_classes()
+    {
+        return $this->belongsTo(OptionClass::class, 'pre_class');
+    }
     public function years()
     {
         return $this->belongsTo(OptionYear::class, 'year');
     }
+    public function ssc_years()
+    {
+        return $this->belongsTo(OptionYear::class, 'ssc_year');
+    }
     public function admission_groups()
     {
         return $this->belongsTo(OptionGroup::class, 'admission_group');
+    }
+    public function ssc_groups()
+    {
+        return $this->belongsTo(OptionGroup::class, 'ssc_group');
+    }
+    public function religions()
+    {
+        return $this->belongsTo(OptionReligion::class, 'religion');
+    }
+    public function genders()
+    {
+        return $this->belongsTo(OptionGender::class, 'gender');
+    }
+    public function pre_countrys()
+    {
+        return $this->belongsTo(Country::class, 'pre_country');
+    }
+    public function per_countrys()
+    {
+        return $this->belongsTo(Country::class, 'per_country');
+    }
+    public function pre_statess()
+    {
+        return $this->belongsTo(State::class, 'pre_states');
+    }
+    public function per_statess()
+    {
+        return $this->belongsTo(State::class, 'per_states');
+    }
+    public function pre_citys()
+    {
+        return $this->belongsTo(City::class, 'pre_city');
+    }
+    public function per_citys()
+    {
+        return $this->belongsTo(City::class, 'per_city');
     }
     public function blood_groups()
     {

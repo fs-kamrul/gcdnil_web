@@ -145,7 +145,7 @@ class AdmissionServiceProvider extends ServiceProvider
                 Theme::asset()
                     ->container('footer')
                     ->usePath(false)
-                    ->add('location-js', url('vendor/Modules/Option/js/option_set_subject.js'), [], [], '1.0.0');
+                    ->add('option_set_subject', url('vendor/Modules/Option/js/option_set_subject.js'), [], [], '1.0.0');
 //                    ->add('location-js', url('/js/location.js'), [], [], '1.0.0');
 //                Assets::addScriptsDirectly([
 //                    'vendor/Modules/Location/js/location.js',

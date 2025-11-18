@@ -60,6 +60,12 @@ Route::group(['middleware' => ['auth', '\Modules\KamrulDashboard\Http\Middleware
             'as'         => 'admissionmerit.deletes',
             'uses'       => 'AdmissionMeritController@deletes',
         ]);
+        //student_migration
+        Route::get('admissionmigration/{class}/{year}', [
+            'as' => 'admissionmigration',
+            'uses' => 'AdmissionMigrationController@add_migration'
+        ])->where('id', '[0-9]+');
+        Route::resource('admissionmigration', 'AdmissionMigrationController');
     });
 });
 Route::group(apply_filters(FILTER_GROUP_PUBLIC_ROUTE,['middleware' => ['web']]), function () {

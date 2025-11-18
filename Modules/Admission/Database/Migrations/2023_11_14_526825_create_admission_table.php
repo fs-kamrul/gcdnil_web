@@ -24,7 +24,7 @@ class CreateAdmissionTable extends Migration
             $table->integer('nationality')->nullable();
             $table->string('birth_registration')->nullable();
 
-            $table->string('roll')->nullable();
+            $table->integer('roll')->nullable();
             $table->string('father_name')->nullable();
             $table->string('bl_father_name')->nullable();
             $table->string('father_phone')->nullable();

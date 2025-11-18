@@ -207,7 +207,7 @@ class AdmissionClassStudentTable extends TableAbstract
                         'className' => 'action-item',
                         'text' => Html::tag('i', '', [
                                 'class' => 'icon-settings text-primary',
-                                'title' => 'Site Plan',
+                                'title' => __('admission::lang.site_plan'),
                             ])->toHtml() . ' ' . Html::tag('span', __('admission::lang.site_plan'), [
                                 'data-action' => 'site-plan',
                                 'data-href' => route('site_plan', [$class_id, $year_id]),
@@ -220,7 +220,7 @@ class AdmissionClassStudentTable extends TableAbstract
 //                        'text' => ProductType::DIGITAL()->toIcon() . ' ' . Html::tag('span', ProductType::DIGITAL()->label(), [
                         'text' => Html::tag('i', '', [
                                 'class' => 'icon-download1 text-primary',
-                                'title' => 'Site Plan',
+                                'title' => __('admission::lang.add_mark'),
                             ])->toHtml() . ' ' . Html::tag('span', __('admission::lang.add_mark'), [
                                 'data-action' => 'digital-product',
                                 'data-href' => route('admissionmark.mark', [$class_id, $year_id]),
@@ -232,10 +232,22 @@ class AdmissionClassStudentTable extends TableAbstract
 //                        'text' => ProductType::DIGITAL()->toIcon() . ' ' . Html::tag('span', ProductType::DIGITAL()->label(), [
                         'text' => Html::tag('i', '', [
                                 'class' => 'icon-printer2 text-primary',
-                                'title' => 'Site Plan',
+                                'title' =>  __('admission::lang.merit_result'),
                             ])->toHtml() . ' ' . Html::tag('span', __('admission::lang.merit_result'), [
                                 'data-action' => 'digital-product',
                                 'data-href' => route('merit_result', [$class_id, $year_id]),
+                                'class' => 'ml-1 color-black',
+                            ])->toHtml(),
+                    ],
+                    [
+                        'className' => 'action-item',
+//                        'text' => ProductType::DIGITAL()->toIcon() . ' ' . Html::tag('span', ProductType::DIGITAL()->label(), [
+                        'text' => Html::tag('i', '', [
+                                'class' => 'icon-upload text-primary',
+                                'title' => __('admission::lang.student_migration'),
+                            ])->toHtml() . ' ' . Html::tag('span', __('admission::lang.student_migration'), [
+                                'data-action' => 'digital-product',
+                                'data-href' => route('admissionmigration', [$class_id, $year_id]),
                                 'class' => 'ml-1 color-black',
                             ])->toHtml(),
                     ],

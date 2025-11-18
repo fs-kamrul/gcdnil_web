@@ -62,6 +62,18 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+        'anik' => [
+            'driver' => 'mysql',
+            'host' => env('DB_ANIK_HOST', '127.0.0.1'),
+            'port' => env('DB_ANIK_PORT', '3306'),
+            'database' => env('DB_ANIK_DATABASE', 'anik_school_manesment_kpg'),
+            'username' => env('DB_ANIK_USERNAME', 'root'),
+            'password' => env('DB_ANIK_PASSWORD', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+        ],
 
         'pgsql' => [
             'driver' => 'pgsql',

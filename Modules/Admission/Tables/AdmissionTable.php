@@ -74,6 +74,12 @@ class AdmissionTable extends TableAbstract
             ->editColumn('status', function ($item) use ($statusDesign) {
                 return Arr::get($statusDesign, $item->status , __('In active'));
             })
+            ->editColumn('class', function ($item) use ($statusDesign) {
+                return $item->class ? $item->classes->name : '&mdash;';
+            })
+            ->editColumn('admission_group', function ($item) use ($statusDesign) {
+                return $item->admission_group ? $item->admission_groups->name : '&mdash;';
+            })
             ->editColumn('payment_status', function ($item) use ($paymentStatusDesign) {
                 return Arr::get($paymentStatusDesign, $item->payment_status , __('Due'));
             })
@@ -95,7 +101,12 @@ class AdmissionTable extends TableAbstract
             'uuid',
             'name',
             'photo',
+            'class',
+            'admission_group',
             'student_id',
+            'roll',
+            'father_name',
+            'mother_nane',
             'payment_amount',
             'payment_status',
             'created_at',
@@ -116,12 +127,32 @@ class AdmissionTable extends TableAbstract
                 'title' => trans('table::lang.image'),
                 'width' => '70px',
             ],
+            'class' => [
+                'title' => trans('admission::lang.class'),
+                'class' => 'text-start',
+            ],
+            'admission_group' => [
+                'title' => trans('option::lang.group'),
+                'class' => 'text-start',
+            ],
             'name' => [
                 'title' => trans('table::lang.name'),
                 'class' => 'text-start',
             ],
+            'roll' => [
+                'title' => trans('admission::lang.roll'),
+                'class' => 'text-start',
+            ],
             'student_id' => [
                 'title' => trans('admission::lang.student_id'),
+                'class' => 'text-start',
+            ],
+            'father_name' => [
+                'title' => trans('table::lang.father_name'),
+                'class' => 'text-start',
+            ],
+            'mother_nane' => [
+                'title' => trans('table::lang.mother_nane'),
                 'class' => 'text-start',
             ],
             'payment_amount' => [

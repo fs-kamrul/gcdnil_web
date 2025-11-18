@@ -28,11 +28,13 @@ use Modules\Admission\Repositories\Interfaces\AdmissionInterface;
 use Modules\Admission\Http\Imports\AdmissionImport;
 use Modules\Admission\Tables\AdmissionTable;
 use Exception;
+use Modules\Option\Http\Models\OptionSet;
 use Mpdf\Mpdf;
 use Throwable;
 use MetaBox;
 use Theme;
 use SeoHelper;
+use Option;
 
 class AdmissionController extends Controller
 {
@@ -459,6 +461,7 @@ class AdmissionController extends Controller
 
             $admission = Admission::where('uuid', $ssl_val_id['element'][0]['value_c'])->first();
             $maxRoll = Admission::where('year', $admission->year)
+                ->where('admission_group', $admission->admission_group)
                 ->where('class', $admission->class)
                 ->max('roll');
 
@@ -628,7 +631,7 @@ class AdmissionController extends Controller
                 'cus_country'      => 'Bangladesh',
                 'cus_phone'        => $admission->phone ??'01711111111',
                 'cus_fax'          => '01711111111',
-                'ship_name'        => 'Customer Name',
+                'ship_name'        => $admission->name,
                 'ship_add1'        => 'Sonaroy sangalshi',
                 'ship_add2'        => 'Nilphamari',
                 'ship_city'        => 'Nilphamari',
@@ -829,6 +832,20 @@ class AdmissionController extends Controller
         $data = array();
         $data['title']        = 'admission_edit';
         $data['record']        = $this->admissionRepository->findOrFail($admission->id);
+
+        $data['subject_list'] = [];
+        $sets = Option::getSetClassSubject($admission->class, $admission->admission_group);
+        foreach ($sets as $setId => $value) {
+            $subjects = OptionSet::find($value->id)->subjects()->pluck('option_subjects.name', 'option_subjects.id');
+            $data['subject_list'][] = [
+                'set_id' => $value->id,
+                'set_name' => $value->name,
+                'subjects' => $subjects,
+                'selected_subject_num' => $value->selected_subjects ?? 1
+            ];
+        }
+//        dd($data);
+
         return view('admission::admission.create',$data);
     }
 
@@ -841,7 +858,7 @@ class AdmissionController extends Controller
      * @return DboardHttpResponse
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Admission  $admission, DboardHttpResponse $response)
+    public function update(Request $request, Admission  $admission, DboardHttpResponse $response, SaveSetSubjectsService $setSubjectsService)
     {
         if (!auth()->user()->can('admission_edit')) {
             abort(403, 'Unauthorized action.');
@@ -853,6 +870,7 @@ class AdmissionController extends Controller
         $id = $admission->id;
         $admission = $this->admissionRepository->firstOrNew(compact('id'));
         $admission->fill($request->input());
+//        dd($admission);
         $admission = $this->admissionRepository->createOrUpdate($admission);
 
         $file_name = 'photo';
@@ -868,7 +886,15 @@ class AdmissionController extends Controller
             $admission->$file_name      = processUpload($request, $admission,$file_name,$path);
             $admission->save();
         }
-
+        $subjectData[] = array();
+        foreach ($request->all() as $key => $value) {
+            if (str_starts_with($key, 'subjects_')) {
+                $setId = str_replace('subjects_', '', $key);
+                $subjectData[$setId] = $value; // $value is an array of IDs
+            }
+        }
+//        dd($subjectData);
+        $setSubjectsService->execute($admission, $subjectData);
         event(new UpdatedContentEvent(ADMISSION_MODULE_SCREEN_NAME, $request, $admission));
         return $response
             ->setPreviousUrl(route('admission.index'))

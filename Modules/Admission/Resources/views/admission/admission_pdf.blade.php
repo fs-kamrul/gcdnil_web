@@ -163,7 +163,8 @@ $n = 0;
 <table class="header">
     <tr>
         <td>
-            <img class="logo" src="{{ asset(getImageUrlById(theme_option('logo'), 'shortcodes')) }}" height="100px">
+{{--            <img class="logo" src="{{ asset(getImageUrlById(theme_option('logo'), 'shortcodes')) }}" height="100px">--}}
+            <img class="logo" src="{{ public_path('logo.png') }}" height="100px">
         </td>
         <td class="title">
             <span class="">{{ theme_option('site_title') }}</span><br/>
