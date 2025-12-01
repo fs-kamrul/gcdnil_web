@@ -172,7 +172,7 @@ class AdmissionMigrationController extends Controller
                 'bl_name' => $admission->bl_name,                           // bl_name
                 'email' => $admission->email,
                 'stu_phone' => $admission->phone,
-                'photo' => $admission->photo,
+                'photo' => 'images/upload/students/'. $admission->classes->name . '/' . $admission->photo,
                 'nationality' => $admission->nationalities->name ?? Null,
                 'birth_registration_number' => $admission->birth_registration,
                 'roll' => $admission->roll ?? 0,

@@ -3,6 +3,7 @@
 use Modules\KamrulDashboard\Packages\Supports\DboardStatus;
 use Modules\Option\Repositories\Interfaces\OptionSubjectInterface;
 use Modules\KamrulDashboard\Packages\Supports\SortItemsWithChildrenHelper;
+use Illuminate\Support\Facades\DB;
 
 if (! defined('OPTION_MODULE_SCREEN_NAME')) {
     define('OPTION_MODULE_SCREEN_NAME', 'option');
@@ -48,19 +49,40 @@ if (! defined('OPTIONCLASS_MODULE_SCREEN_NAME')) {
 if (! function_exists('get_subject_list_class')) {
     function get_subject_list_class($adminboard = 'Eleven'): array
     {
-//        'adminboard' => $adminboard,
+        // Fetch subjects
         $Subjects = app(OptionSubjectInterface::class)
             ->allBy(['status' => DboardStatus::PUBLISHED], [], ['id', 'name']);
 
-//        $allSubjectRepository = app(OptionSubjectInterface::class);
-//        $allSubject = $allSubjectRepository->advancedGet([
-//            'condition' => ['status' => DboardStatus::PUBLISHED],
-//            'order_by'  => ['order' => 'asc'],
-//        ])->pluck('name', 'id')->toArray();
-//        return $allSubject;
+        // Get counts of subjects from admission_set_subjects
+        $subjectCounts = DB::table('admission_set_subjects')
+            ->select('subject_id', DB::raw('COUNT(*) as total'))
+            ->groupBy('subject_id')
+            ->pluck('total', 'subject_id'); // returns [subject_id => total]
+
+        // Append count to subject name
+        foreach ($Subjects as $subject) {
+            $count = $subjectCounts[$subject->id] ?? 0;
+            $subject->name = "{$subject->name} ({$count})";
+        }
+
+        // Return sorted
         return app(SortItemsWithChildrenHelper::class)
             ->setChildrenProperty('child_cats')
             ->setItems($Subjects)
             ->sort();
+////        'adminboard' => $adminboard,
+//        $Subjects = app(OptionSubjectInterface::class)
+//            ->allBy(['status' => DboardStatus::PUBLISHED], [], ['id', 'name']);
+//
+////        $allSubjectRepository = app(OptionSubjectInterface::class);
+////        $allSubject = $allSubjectRepository->advancedGet([
+////            'condition' => ['status' => DboardStatus::PUBLISHED],
+////            'order_by'  => ['order' => 'asc'],
+////        ])->pluck('name', 'id')->toArray();
+////        return $allSubject;
+//        return app(SortItemsWithChildrenHelper::class)
+//            ->setChildrenProperty('child_cats')
+//            ->setItems($Subjects)
+//            ->sort();
     }
 }
